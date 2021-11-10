@@ -1,0 +1,247 @@
+
+  /* ======RESET======== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ======VARIABLE======= */
+  :root {
+    --primary-color: rgb(10, 17, 40);
+    --white-color: #ffffff;
+    --gap: 3rem;
+  }
+  
+ 
+  /* ==========HEAD============== */
+  
+  header {
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(160, 154, 154, 1);
+  }
+
+  .c-header{
+    display: flex;
+    max-width: 120rem;
+    height: 6.7rem;
+    margin: 0 auto;
+    padding: 0 var(--gap);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .c-header h1 a {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+  }
+  
+  .c-header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .c-header nav ul li a {
+    display: block;
+    font-size: 1.8rem;
+    padding: 2rem;
+    color: var(--primary-color);
+    position: relative;
+  }
+  .c-header nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 0.2rem;
+    background-color: crimson;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transition: all 300ms ease-in-out;
+  }
+  .c-header nav ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+  }
+
+  /* =========HOME======== */
+
+  .c-home {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh;
+  }
+  
+  .c-home__text h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 5rem;
+  }
+  
+  .c-home__text p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+  }
+  
+  .c-img img {
+    width: 100%;
+  }
+
+  /* ========INTRODUCTION====== */
+  .c-intro {
+    text-align: center;
+    max-width: 64rem;
+    /*  min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  
+  .c-intro h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  
+  .c-intro p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* =======GRID ONE====== */
+  .c-grid-one h2{
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  
+  .c-grid-one p{
+    font-size: 2rem;
+    margin-bottom: 8rem;
+  }
+  
+  .c-grid-one .grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    counter-reset: grid-counter;
+  }
+  
+  .c-grid-one .grid .text h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+  
+  }
+  .c-grid-one .grid .text h3::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+  }
+  
+  .c-grid-one .grid .text p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+  
+  }
+
+  /* =======GALLERY====== */
+  .c-gallery h2{
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  .c-gallery p{
+    font-size: 2rem;
+    margin-bottom: 8rem;
+  }
+  
+  .c-gallery .grid-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: var(--gap);
+   
+  }
+  .c-gallery .grid-gallery .imagem{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+  }
+  
+  .c-gallery .grid-gallery .imagem img {
+    transition: all 300ms ease-in-out;
+  }
+  
+  .c-gallery .grid-gallery .imagem img:hover {
+    transform:translate(-3%, 3%) scale(1.2) rotate(5deg);
+  }
+  
+  
+  /* =========LAYOUT====== */
+  
+  .section {
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 120rem;
+    padding: 10rem var(--gap);
+    margin: 0 auto;
+  }
+
+  .divider {
+    height: 6.5rem;
+  }
+
+  .main-bg {
+    background-image: url('../img/main-bg.svg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+  }
+
+
+  
